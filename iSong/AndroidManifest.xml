@@ -17,6 +17,22 @@
             android:name="com.example.isong.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
+              
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.isong.TTSActivity"
+            android:label="@string/title_activity_tts" >
+            <intent-filter>
+               
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.isong.TextToSpeechActivity"
+            android:label="@string/title_activity_text_to_speech" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

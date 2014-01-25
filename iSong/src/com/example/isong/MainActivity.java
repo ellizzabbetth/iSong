@@ -10,12 +10,14 @@ import android.view.View;
 
 public class MainActivity extends Activity {
 
+	MediaPlayer song;
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MediaPlayer song = MediaPlayer.create(this,  R.raw.benchun_inception);
-        song.start();
+        song = MediaPlayer.create(this,  R.raw.getbetterjohn);
+       // song.start();
     }
 
     public void openSoundcloud(View v){
@@ -24,7 +26,26 @@ public class MainActivity extends Activity {
     	i.setData(Uri.parse(url));
     	startActivity(i);
     }
+    
+    @Override
+    protected void onResume() {
+      // song.start();
+     //  song = MediaPlayer.create(this,  R.raw.getbetterjohn);
+       
+    	// TODO Auto-generated method stub
+    	super.onRestart();
+    }
 
+    
+    @Override
+    protected void onPause() {
+    	// TODO Auto-generated method stub
+        song.stop();
+        song.release();
+    	super.onPause();
+    	
+    }
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

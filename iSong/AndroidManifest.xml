@@ -17,9 +17,8 @@
             android:name="com.example.isong.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
-              
-
-                />
+           
+                
             </intent-filter>
         </activity>
         <activity
